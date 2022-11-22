@@ -1,0 +1,114 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "M3U8 下载器",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true,
+      "fs": {
+        "all": true,
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true,
+        "scope": [
+          "$APPCONFIG/*",
+          "$APPDATA/*",
+          "$APPLOCALDATA/*",
+          "$APPCACHE/*",
+          "$APPLOG/*",
+          "$AUDIO/*",
+          "$CACHE/*",
+          "$CONFIG/*",
+          "$DATA/*",
+          "$LOCALDATA/*",
+          "$DESKTOP/*",
+          "$DOCUMENT/*",
+          "$DOWNLOAD/*",
+          "$EXE/*",
+          "$FONT/*",
+          "$HOME/*",
+          "$PICTURE/*",
+          "$PUBLIC/*",
+          "$RUNTIME/*",
+          "$TEMPLATE/*",
+          "$VIDEO/*",
+          "$RESOURCE/*",
+          "$APP/*",
+          "$LOG/*",
+          "$TEMP/*"
+        ]
+      },
+      "http":{
+        "all": true,
+        "scope":[
+          "http://**",
+          "https://**"
+        ]
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "com.yhyzgn.m3u8.downloader",
+      "longDescription": "M3U8 下载器",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 800,
+        "resizable": true,
+        "title": "M3U8 下载器",
+        "width": 1200,
+        "center": true,
+        "alwaysOnTop": false
+      }
+    ]
+  }
+}

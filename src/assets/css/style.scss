@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/* 字体主色 */
+//$primaryColor: teal;
+$primaryColor: #008082;
+
+$primaryAccent: #0423443e;
+
+$primaryColorDark: #006a6b;
+
+$primaryAlphaColorDark: #2c3e5044;
+
+$shadowPrimaryColorDark: $primaryAlphaColorDark;
+
+$primaryShadow: 0 0 10px 2px $primaryColor;
+
+$primaryShadowDark: 0 0 10px 2px $shadowPrimaryColorDark;
+
+$primaryAlphaColor: #3eaf7c22;
+
+$blackAlphaColor: #9d9d9d44;
+
+/* placeholder 颜色*/
+$placeHolderColor: #adb0af;
+
+/* 背景主色 */
+$primaryBgColor: #f5fcffec;
+
+/* 文字主题颜色 */
+$fontPrimaryColor: #54565C;
+
+$dangerColor: #fc3519;
+
+$dividerColor: #eaecef;
+
+$headerBackgroundColor: $primaryBgColor;
+
+/* ---------------------------------------------------------------------------------------------------- */
+/*
+  Element-Plus 主题定制
+ */
+$--colors: (
+        "primary": (
+                "base": $primaryColor,
+        ),
+        "success": (
+                "base": $primaryColor,
+        ),
+        "warning": (
+                "base": #f2711c,
+        ),
+        "danger": (
+                "base": $dangerColor,
+        ),
+        "error": (
+                "base": $dangerColor,
+        ),
+        "info": (
+                "base": $primaryColor,
+        ),
+);
+
+$--el-headers: (
+        'padding': 0,
+        'height': 64px,
+);
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: $--colors,
+  $header: $--el-headers,
+  $button-padding-horizontal: ("default": 18px)
+);
+
+// 自定义字体必须在 element-plus 自定义主题之后，否则出现 scss 报错
+@font-face {
+  font-family: 'ZhongZheng';
+  src: url("/src/assets/font/ZhongZheng.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
